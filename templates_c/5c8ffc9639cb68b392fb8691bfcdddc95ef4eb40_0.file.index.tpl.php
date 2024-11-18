@@ -1,37 +1,43 @@
 <?php
-/* Smarty version 3.1.46, created on 2024-11-18 14:02:19
+/* Smarty version 3.1.46, created on 2024-11-18 14:04:27
   from '/Users/shota.arima/practice/smarty/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.46',
-  'unifunc' => 'content_673aca5b3aa613_22567611',
+  'unifunc' => 'content_673acadb0c91c2_27150772',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5c8ffc9639cb68b392fb8691bfcdddc95ef4eb40' => 
     array (
       0 => '/Users/shota.arima/practice/smarty/index.tpl',
-      1 => 1731905700,
+      1 => 1731906192,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
+    'file:header.tpl' => 1,
   ),
 ),false)) {
-function content_673aca5b3aa613_22567611 (Smarty_Internal_Template $_smarty_tpl) {
+function content_673acadb0c91c2_27150772 (Smarty_Internal_Template $_smarty_tpl) {
+ob_start();
+echo (defined('MY_TITLE') ? constant('MY_TITLE') : null);
+$_prefixVariable1 = ob_get_clean();
+$_smarty_tpl->_subTemplateRender('file:header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('page_title'=>$_prefixVariable1), 0, false);
 ?>
+
 <dl>
-    <dt> 現在のタイムスタンプ
+    <dt>現在の タイムスタンプ
     <dd> <?php echo time();?>
 
 
-    <dt> 現在処理中のテンプレートファイル名
+    <dt>現在処理中のテンプレートファイル名
     <dd> <?php echo basename($_smarty_tpl->source->filepath);?>
 
 
-    <dt> このテンプレートをコンパイルしたSmartyバージョン
+    <dt>このテンプレートをコンパイルした Smarty のバージョン
     <dd> <?php echo Smarty::SMARTY_VERSION;?>
 
 </dl>
@@ -39,7 +45,7 @@ function content_673aca5b3aa613_22567611 (Smarty_Internal_Template $_smarty_tpl)
 <p> <?php echo $_smarty_tpl->tpl_vars['hello']->value;?>
 
 
-<p> <?php echo $_smarty_tpl->tpl_vars['today']->value->format('Y-m-d (D)');?>
+    <p> <?php echo $_smarty_tpl->tpl_vars['today']->value->format('Y-m-d (D)');?>
 
 
 <ul>
@@ -53,7 +59,7 @@ for ($__section_i_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']-
 ?>
     <li> <?php echo $_smarty_tpl->tpl_vars['animal']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)];?>
 
-    <?php
+        <?php
 }
 }
 ?>
@@ -66,20 +72,18 @@ $_smarty_tpl->tpl_vars['__smarty_section_i'] = new Smarty_Variable(array());
 if ($__section_i_1_total !== 0) {
 for ($__section_i_1_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] = 0; $__section_i_1_iteration <= $__section_i_1_total; $__section_i_1_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']++){
 ?>
-<ul>
-    <li> name: <?php echo $_smarty_tpl->tpl_vars['address']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['name'];?>
+    <ul>
+        <li> name: <?php echo $_smarty_tpl->tpl_vars['address']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['name'];?>
 
-    <li> home: <?php echo $_smarty_tpl->tpl_vars['address']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['home'];?>
+        <li> home: <?php echo $_smarty_tpl->tpl_vars['address']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['home'];?>
 
-    <li> call: <?php echo $_smarty_tpl->tpl_vars['address']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['call'];?>
+        <li> cell: <?php echo $_smarty_tpl->tpl_vars['address']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['cell'];?>
 
-    <li> e-mail: <?php echo $_smarty_tpl->tpl_vars['address']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['e']-'mail';?>
+        <li> e-mail: <?php echo $_smarty_tpl->tpl_vars['address']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['email'];?>
 
-</ul>
+    </ul>
 <?php
 }
 }
-?>
-
-<?php }
+}
 }
