@@ -1,6 +1,6 @@
 <?php
 
-require_once 'vendor/autoload.php';
+require_once("../vendor/autoload.php");
 
 ini_set('date.timezone', 'Asia/Tokyo');
 define('MY_TITLE', 'このページのタイトル');
@@ -19,4 +19,4 @@ $smarty->assign('address', array(
         'cell' => '123456', 'email' => 'jane@myexample.com', ),
 ));
 
-$smarty->display('index.tpl');
+$smarty->display('../smarty/templates/index.tpl');
